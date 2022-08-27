@@ -2,17 +2,18 @@
 
 This implements a twist on the standard procedure of contour generation using marching squares. The algorithm generates contours of images based on differences between neighboring tiles, as opposed to a universal value threshold. 
 
-![Example using an image of me and my girlfriend across different thresholds](Example.jpg)
+## Example
 
---
+This is an example of the contour generator using a range of thresholds. 
+
+![](Example.jpg)
+
 
 ## Algorithm
 
 Standard implementations of contour generation using marching squares uses a universal threshold to determine wheter a tile is "inside" or "outside" of the contour. While this approach is appropriate for generating contours of implicit expressions, generating contours (namely, salient contours) is difficult with this approach, since contours from real images are not defined by global thresholds, but rather, local changes in color. 
 Thus, I implemented this contour generator that determines borders between tiles based on whether two corners on a "square" have a differnece in color intensity greater than a relative threshold value. 
 As such, the lookup-table contour lines greatly differ from standard implementations of the marching squares algorithm.
-
---
 
 ## Image Processing
 
