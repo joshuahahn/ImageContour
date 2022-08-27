@@ -113,9 +113,11 @@ def main():
     grayImage = ImageOps.grayscale(RGBContrast)
     imageArray = np.asarray(grayImage)
     imageArray = imageArray.astype('int')
-    plt.imshow(imageArray, cmap='gray')# cmap is used to display image as gs
+    plt.imshow(RGBImage)
+    plt.title("Original Image")
+    #plt.imshow(imageArray, cmap='gray')# cmap is used to display image as gs
 
-    threshold = 50
+    threshold = 40
 
     fig,ax = plt.subplots()
     fig.suptitle("Contour generation, threshold: " + str(threshold))
