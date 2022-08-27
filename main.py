@@ -39,7 +39,6 @@ def marchingSquares(img, k, ax):
             renderContour(display_lookup[tuple(binIndex)], row, col, ax)
         
 def renderContour(contourIdx, row, col, ax):
-    print(contourIdx)
     # Class 1: No contour lines
     if (contourIdx == 1 or contourIdx == 2):
         pass
@@ -106,7 +105,8 @@ def renderContour(contourIdx, row, col, ax):
 
 
 def main():
-    RGBImage = Image.open('panda.jpeg')
+    #RGBImage = Image.open('panda.jpeg')
+    RGBImage = Image.open('images/seyoandme.jpg')
     RGBResized = RGBImage.resize((100,100), Image.ANTIALIAS)
     enhancer = ImageEnhance.Contrast(RGBResized)
     RGBContrast = enhancer.enhance(2)
