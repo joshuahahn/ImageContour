@@ -2,6 +2,8 @@
 
 This implements a twist on the standard procedure of contour generation using marching squares. The algorithm generates contours of images based on differences between neighboring tiles, as opposed to a universal value threshold. 
 
+![Example using an image of me and my girlfriend across different thresholds](Example.jpg)
+
 --
 
 ## Algorithm
